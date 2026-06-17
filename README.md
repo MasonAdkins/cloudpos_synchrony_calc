@@ -8,6 +8,8 @@ after-tax total, calculates the Synchrony fee for each financing plan, and lets
 you copy the right amount to the clipboard with one click. You then paste it
 into the price box and complete the sale.
 
+![Synchrony Financing Fee Calculator overlay on the Set Price screen](preview.png)
+
 ## Why clipboard instead of auto-fill?
 
 The price field is a production Vue (`vue-currency-input`) control whose internal
