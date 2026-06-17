@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Synchrony Financing Fee Calculator",
+  "version": "1.0",
+  "description": "Calculates Synchrony financing fees on the Citrus-Lime Cloud POS set-price screen and copies the chosen fee to the clipboard.",
+  "content_scripts": [
+    {
+      "matches": ["*://pos2.citruslime.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
