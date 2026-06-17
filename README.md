@@ -39,6 +39,28 @@ control of the actual value and avoids submitting a wrong amount.
 
 To change a plan or rate, edit the `PLANS` array near the top of `content.js`.
 
+## Set up the POS item
+
+The extension keys off a single POS item. Before installing, create it in
+Cloud POS:
+
+1. Create a new **non-inventory** item.
+2. Set the **description** to `Synchrony Financing Fee`.
+3. Set the **item lookup code** to `synchronyfee`.
+4. Under **Advanced Setup**, enable these options:
+   - **Prompt for price at Point of Sale** — this is what opens the Set Price
+     screen where the overlay appears.
+   - **Block quantity entry at Point of Sale**
+   - **Item is not discountable at Point of Sale**
+
+   Leave the rest unchecked.
+
+![Advanced Setup options for the Synchrony Financing Fee item](item_settings.png)
+
+The description and lookup code both contain "synchrony", which is how the
+extension recognizes the screen. If you use a different description or code,
+update `matchKeyword` in the `CONFIG` block of `content.js` to match.
+
 ## Installation
 
 1. Download or clone this repository.
